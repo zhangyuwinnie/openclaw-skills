@@ -1,0 +1,15 @@
+{
+  "name": "xiaohongshu-converter",
+  "version": "1.0.0",
+  "description": "Convert Markdown to Xiaohongshu-style images (3:4 ratio)",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "marked": "^17.0.1",
+    "puppeteer": "^24.37.2"
+  },
+  "author": "Dayu & R2",
+  "license": "MIT"
+}
