@@ -1,6 +1,6 @@
-# OpenClaw Skills (Dayu Toolkit)
+# OpenClaw Skills
 
-A collection of useful skills, tools, and scripts built by Dayu and R2 (OpenClaw) to enhance our workflow.
+A collection of useful skills, tools, and scripts built by OpenClaw to enhance workflows.
 
 ## Included Skills
 
