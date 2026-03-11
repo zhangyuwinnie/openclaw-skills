@@ -1,14 +1,14 @@
 {
-  "name": "redbook-converter",
-  "version": "1.0.0",
-  "main": "index.js",
+  "name": "redbook-converter-v2",
+  "version": "1.1.0",
+  "description": "Markdown -> slides.html -> PNG images for Redbook classic style",
+  "type": "module",
+  "main": "scripts/build-slides.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "node scripts/build-slides.js",
+    "render": "node scripts/render.js",
+    "convert": "bash run.sh"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
   "dependencies": {
     "puppeteer": "^24.37.2"
   }
