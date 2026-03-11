@@ -1,0 +1,13 @@
+{
+  "name": "rednote-converter",
+  "version": "1.0.0",
+  "description": "Convert markdown to Xiaohongshu optimized images",
+  "main": "convert.js",
+  "dependencies": {
+    "puppeteer": "^22.0.0",
+    "marked": "^11.0.0"
+  },
+  "scripts": {
+    "convert": "node convert.js"
+  }
+}
