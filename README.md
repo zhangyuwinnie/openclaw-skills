@@ -11,10 +11,12 @@ OpenClaw skills repository (versioned).
 - **Output:** `xiaohongshu-01.png`, `xiaohongshu-02.png`, ...
 
 ### 2) `redbook-converter-v2`
-- **Type:** Template-driven renderer (classic style baseline)
+- **Type:** Template-driven renderer (style baselines: classic + minimal-card)
 - **Flow:** `slides.html -> PNG`
-- **Best for:** Design-controlled layouts and style extension (e.g. `minimal-card`)
-- **Template:** `redbook-converter-v2/assets/template.html`
+- **Best for:** Design-controlled layouts and style extension
+- **Templates:**
+  - `redbook-converter-v2/assets/template.html` (classic)
+  - `redbook-converter-v2/assets/template.minimal-card.html` (minimal-card)
 - **Output:** `slide_1.png`, `slide_2.png`, ...
 
 ## Versioning Notes

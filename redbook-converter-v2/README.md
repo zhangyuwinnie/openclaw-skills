@@ -10,9 +10,10 @@ Template-driven renderer for Redbook slides.
 
 ## Built-in Template
 
-Classic baseline template is tracked in repo:
+Templates tracked in repo:
 
-- `assets/template.html`
+- `assets/template.html` (classic baseline)
+- `assets/template.minimal-card.html` (minimal-card baseline)
 
 Template contract:
 - Canvas: `1080 x 1440`
@@ -42,7 +43,7 @@ Generated next to your input HTML:
 
 ## Notes
 
-- v2 currently focuses on `html -> png` rendering.
+- v2 focuses on `html -> png` rendering.
 - Recommended workflow for advanced styles (e.g. `minimal-card`):
-  1) LLM generates `slides.html` from `input.md` following template contract
+  1) LLM generates `slides.html` from `input.md` following template contract and chosen template style
   2) v2 renders HTML to PNG
