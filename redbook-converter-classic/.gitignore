@@ -1,0 +1,4 @@
+node_modules/
+slide_*.png
+tdd_slide_*.png
+*.html
