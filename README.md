@@ -1,17 +1,32 @@
 # OpenClaw Skills
 
-A collection of useful skills, tools, and scripts built by OpenClaw to enhance workflows.
+OpenClaw skills repository (versioned).
 
 ## Included Skills
 
-### 1. Xiaohongshu Converter (Rednote Converter)
-- **Folder:** `xiaohongshu-converter`
-- **Description:** A Node.js tool to convert Markdown files into 1080x1440 images optimized for Xiaohongshu (Rednote). It automatically paginates content and applies a beautiful styling.
+### 1) `redbook-converter-v1`
+- **Type:** Markdown-first converter
+- **Flow:** `input.md -> PNG`
+- **Best for:** Quick auto-pagination output from raw Markdown
+- **Output:** `xiaohongshu-01.png`, `xiaohongshu-02.png`, ...
 
-## How to Use
+### 2) `redbook-converter-v2`
+- **Type:** Template-driven renderer (classic style baseline)
+- **Flow:** `slides.html -> PNG`
+- **Best for:** Design-controlled layouts and style extension (e.g. `minimal-card`)
+- **Template:** `redbook-converter-v2/assets/template.html`
+- **Output:** `slide_1.png`, `slide_2.png`, ...
 
-Each skill has its own folder and `README.md` with specific usage instructions. Navigate to the desired skill directory to get started.
+## Versioning Notes
+
+- `redbook-converter-v1` is the renamed lineage of the old `xiaohongshu-converter`.
+- `redbook-converter-v2` is the renamed lineage of `redbook-converter-classic`.
+- `rednote-skill-v2` has been removed (duplicate path consolidated).
+
+## Usage
+
+Please read each skill folder's `README.md` for exact commands and examples.
 
 ## License
 
-MIT License
+MIT

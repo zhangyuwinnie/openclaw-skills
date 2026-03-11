@@ -1,31 +1,35 @@
-# Xiaohongshu Converter (Rednote Converter)
+# Redbook Converter v1
 
-A Node.js tool to convert Markdown files into 1080x1440 images optimized for Xiaohongshu (Rednote). It automatically paginates content and applies a beautiful styling.
+Markdown-first converter for Xiaohongshu/Redbook images.
 
-## Features
-- **Markdown Support:** Converts H1, H2, H3, paragraphs, lists, blockquotes, and code blocks.
-- **Auto-Pagination:** Splits long content into multiple 3:4 aspect ratio images.
-- **Stylish Layout:** Uses Noto Sans SC font, custom margins, and elegant spacing.
-- **Puppeteer Rendering:** Ensures high-quality screenshots.
+## What it does
+
+- Parses Markdown (`h1/h2/h3`, paragraphs, lists, quote, code)
+- Auto-paginates into 3:4 slides
+- Renders to 1080x1440 PNG images
 
 ## Usage
 
-1.  **Install Dependencies:**
-    ```bash
-    npm install
-    ```
+```bash
+npm install
+node index.js <input.md>
+```
 
-2.  **Prepare your Markdown file:** (e.g., `input.md`)
+Example:
 
-3.  **Run the Converter:**
-    ```bash
-    node index.js input.md
-    ```
+```bash
+node index.js /path/to/tdd_xiaohongshu.md
+```
 
-4.  **Output:**
-    The script will generate `xiaohongshu-01.png`, `xiaohongshu-02.png`, etc., in the current directory.
+## Output
 
-## Requirements
-- Node.js
-- Puppeteer (`npm install puppeteer`)
-- Marked (`npm install marked`)
+Generated in current working directory:
+
+- `xiaohongshu-01.png`
+- `xiaohongshu-02.png`
+- ...
+
+## Notes
+
+- This is the fast, automatic pipeline (`md -> png`).
+- For template/styled rendering (`html -> png`), use `../redbook-converter-v2`.
