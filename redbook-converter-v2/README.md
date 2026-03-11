@@ -41,6 +41,27 @@ Generated next to your input HTML:
 - `slide_2.png`
 - ...
 
+## Color Picking Utility
+
+A helper script is included for extracting palette colors from reference images:
+
+- `scripts/pick_colors.py`
+
+Usage examples:
+
+```bash
+# ROI sampling (x,y,w,h)
+python3 scripts/pick_colors.py <image> --roi 640,520,60,640 --name outer_bg
+
+# Point sampling with radius
+python3 scripts/pick_colors.py <image> --point 686,560 --radius 6 --name near_bg
+```
+
+Optional filters:
+
+- `--min-luma <0-255>`
+- `--max-luma <0-255>`
+
 ## Notes
 
 - v2 focuses on `html -> png` rendering.

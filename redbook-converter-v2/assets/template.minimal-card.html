@@ -8,19 +8,19 @@
   @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;600;700;900&display=swap');
 
   :root {
-    --bg: #f6f3f1;
-    --card: #ffffff;
-    --text-main: #2f2f33;
-    --text-sub: #4b4b50;
-    --text-muted: #9a9aa1;
-    --accent: #e86b63;
+    --bg: #faf9f6;
+    --card: #fdfbf9;
+    --text-main: #343434;
+    --text-sub: #6b6b6b;
+    --text-muted: #be9f95;
+    --accent: #e88374;
 
     --outer-padding: 44px;
     --card-padding-x: 84px;
     --card-padding-y: 76px;
     --card-radius: 24px;
-    --card-border: #ececee;
-    --card-shadow: 0 4px 18px rgba(0, 0, 0, 0.05);
+    --card-border: #f3f2f0;
+    --card-shadow: 0 2px 10px rgba(0, 0, 0, 0.035);
   }
 
   * { box-sizing: border-box; }
@@ -28,7 +28,7 @@
   body {
     margin: 0;
     padding: 40px 0;
-    background: #f1f1f3;
+    background: #ffffff;
     font-family: 'Noto Sans SC', sans-serif;
     display: flex;
     flex-direction: column;
@@ -126,7 +126,7 @@
     left: var(--card-padding-x);
     right: var(--card-padding-x);
     bottom: 40px;
-    border-top: 2px solid #f0f0f2;
+    border-top: 2px solid #faeee5;
     padding-top: 20px;
     display: flex;
     justify-content: space-between;
@@ -156,9 +156,13 @@
     line-height: 1.45;
   }
 
+  .bullets li::marker {
+    color: var(--accent);
+  }
+
   .keyword {
-    color: #b17f70;
-    background: #faf1ee;
+    color: #c59d95;
+    background: #fcf3ee;
     border-radius: 10px;
     padding: 2px 10px;
     font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', monospace;
@@ -178,8 +182,7 @@
         <span class="emphasis-line"></span>
       </div>
 
-      <img class="icon" src="https://em-content.zobj.net/source/apple/391/face-screaming-in-fear_1f631.png" alt="icon" />
-      <!-- If no icon, remove the img above. -->
+      <!-- icon optional: keep removed by default for cleaner minimal-card -->
 
       <p class="subtitle">impeccable Skill救了我</p>
 
