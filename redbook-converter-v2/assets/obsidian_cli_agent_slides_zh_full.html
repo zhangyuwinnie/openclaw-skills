@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=1080, height=1440, initial-scale=1.0" />
+<title>Obsidian + Agent 全内容版</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;600;700;900&display=swap');
+  :root {
+    --bg: rgb(252, 244, 242);
+    --card: #ffffff;
+    --text-main: #343434;
+    --text-sub: #6b6b6b;
+    --text-muted: #be9f95;
+    --accent: #e88374;
+    --outer-padding: 44px;
+    --card-padding-x: 84px;
+    --card-padding-y: 76px;
+    --card-radius: 24px;
+    --card-border: rgb(238, 235, 231);
+    --card-shadow: 0 2px 10px rgba(0,0,0,.035);
+  }
+  *{box-sizing:border-box}
+  body{margin:0;padding:40px 0;background:#fff;font-family:'Noto Sans SC',sans-serif;display:flex;flex-direction:column;align-items:center;gap:32px}
+  .slide{width:1080px;height:1440px;background:var(--bg);border-radius:24px;padding:var(--outer-padding);overflow:hidden}
+  .card{width:100%;height:100%;background:var(--card);border:1px solid var(--card-border);border-radius:var(--card-radius);box-shadow:var(--card-shadow);padding:var(--card-padding-y) var(--card-padding-x);position:relative}
+  .cover-card{padding-left:48px;padding-right:48px}
+  .title{color:var(--text-main);font-size:84px;line-height:1.05;font-weight:900;margin:0;white-space:nowrap;letter-spacing:-1.5px}
+  .title.auto-size{font-size:var(--title-size,84px)}
+  .title-underline{width:150px;height:8px;border-radius:8px;background:#e74f42;margin-top:20px}
+  .subtitle{color:var(--text-sub);font-size:44px;line-height:1.35;margin:22px 0 0}
+  .section-title{color:var(--text-main);font-size:54px;line-height:1.25;font-weight:800;margin:0 0 20px}
+  .body-text{color:var(--text-sub);font-size:38px;line-height:1.6;margin:0 0 20px}
+  .bullets{margin:0;padding-left:34px;color:var(--text-sub)}
+  .bullets li{margin-bottom:16px;font-size:36px;line-height:1.45}
+  .bullets li::marker{color:var(--accent)}
+  .cover-img{margin-top:18px;width:100%;height:700px;object-fit:cover;border-radius:18px;border:1px solid #eee}
+  .footer{position:absolute;left:var(--card-padding-x);right:var(--card-padding-x);bottom:40px;border-top:2px solid #faeee5;padding-top:20px;display:flex;justify-content:space-between;color:var(--text-muted);font-size:32px}
+</style>
+</head>
+<body>
+  <!-- 1: cover -->
+  <div class="slide"><div class="card cover-card">
+    <h1 class="title auto-size" data-fit-title>Obsidian + Agent</h1>
+    <div class="title-underline" data-title-underline></div>
+    <p class="subtitle" style="position:absolute;left:84px;right:84px;bottom:128px;">把笔记变成「可执行的第二大脑」</p>
+    <div class="footer"><span>@Dayu · R2</span><span>1/7</span></div>
+  </div></div>
+
+  <!-- 2: image -->
+  <div class="slide"><div class="card">
+    <h2 class="section-title">先看图：这就是协作形态</h2>
+    <img class="cover-img" src="./obsidian-agent-cover.jpg" alt="cover" />
+    <p class="body-text" style="font-size:33px;margin-top:14px;">这张图来自 Greg Isenberg 最近的视频（讲完整系统与 Claude Code 工作流）。</p>
+    <p class="body-text" style="font-size:34px;margin-top:-2px;">核心点：有了 CLI，笔记不只是“存档”，而是能被 Agent 调用的长期上下文系统。</p>
+    <div class="footer"><span>@Dayu · R2</span><span>2/7</span></div>
+  </div></div>
+
+  <!-- 3 -->
+  <div class="slide"><div class="card">
+    <h2 class="section-title">为什么这件事重要</h2>
+    <p class="body-text" style="margin-bottom:0;">当 Obsidian 里积累了足够多、并且彼此有链接的笔记后，Agent 不再只是通用问答工具，而是能基于你的长期上下文做协作。</p>
+    <h2 class="section-title" style="margin-top:72px;">它可以帮你</h2>
+    <ul class="bullets">
+      <li>跨主题连接想法（发现隐藏关联）</li>
+      <li>从旧笔记里挖出新点子</li>
+      <li>给出更贴合你的优先级建议</li>
+      <li>找到被遗忘的 follow-up 和未完成事项</li>
+      <li>把零散记录整理成可执行计划</li>
+    </ul>
+    <div class="footer"><span>@Dayu · R2</span><span>3/7</span></div>
+  </div></div>
+
+  <!-- 4: one-line takeaway standalone -->
+  <div class="slide"><div class="card">
+    <h2 class="section-title">一句话结论</h2>
+    <p class="body-text" style="font-size:46px;line-height:1.55;margin-top:34px;">Obsidian 现在有 CLI，Agent 可以直接读写和检索你的笔记库。</p>
+    <p class="body-text" style="font-size:42px;line-height:1.55;margin-top:40px;">这不是小更新，而是“人类知识库 × Agent 执行力”的接口升级。</p>
+    <div class="footer"><span>@Dayu · R2</span><span>4/7</span></div>
+  </div></div>
+
+  <!-- 5 -->
+  <div class="slide"><div class="card">
+    <h2 class="section-title">实操场景（Claude Code）</h2>
+    <p class="body-text">你可以让 Agent：</p>
+    <ul class="bullets">
+      <li>自动保存知识片段到 Obsidian</li>
+      <li>在整个知识库里做语义搜索</li>
+      <li>基于双链关系生成专题总结</li>
+      <li>把“想法草稿”变成“行动清单”</li>
+    </ul>
+    <p class="body-text" style="margin-top:20px;">也就是说：
+      Obsidian 负责长期记忆与结构化连接；
+      Agent 负责检索、归纳、推理与执行；
+      你负责方向、判断与最终决策。</p>
+    <div class="footer"><span>@Dayu · R2</span><span>5/7</span></div>
+  </div></div>
+
+  <!-- 6 -->
+  <div class="slide"><div class="card">
+    <h2 class="section-title">可直接复用的一句话委托</h2>
+    <ul class="bullets">
+      <li>「扫描我最近 2 周的笔记，给我这周最该做的 3 件事。」</li>
+      <li>「把 AI Agent、投资、效率相关笔记串起来，找 5 个跨领域机会点。」</li>
+      <li>「帮我找出上个月提过但没有推进的事项，并给出下一步动作。」</li>
+    </ul>
+    <p class="body-text" style="margin-top:26px;">当笔记库成熟后，一句话就能触发“检索 → 归纳 → 优先级 → 执行建议”的完整链路。</p>
+    <div class="footer"><span>@Dayu · R2</span><span>6/7</span></div>
+  </div></div>
+
+  <!-- 7 -->
+  <div class="slide"><div class="card">
+    <h2 class="section-title">Bottom line</h2>
+    <p class="body-text">Obsidian CLI 不是小功能，而是协作接口升级。</p>
+    <p class="body-text">当笔记库足够丰富时，Obsidian CLI + Agent 会把“记录知识”升级为“调度知识”。</p>
+    <p class="body-text">你不只是在记笔记，而是在训练一个真正懂你上下文的协作系统。</p>
+    <div class="footer"><span>@Dayu · R2</span><span>7/7</span></div>
+  </div></div>
+<script>
+(function(){
+  function visualLength(text){
+    let len = 0;
+    for (const ch of text) {
+      if (/\s/.test(ch)) continue;
+      if (/[\u4e00-\u9fff]/.test(ch)) len += 1;
+      else if (/[A-Za-z0-9]/.test(ch)) len += 0.5;
+      else len += 0.5;
+    }
+    return len;
+  }
+  function baseSize(L){
+    if (L <= 8) return 142;
+    if (L <= 12) return 128;
+    if (L <= 16) return 116;
+    if (L <= 20) return 104;
+    return 92;
+  }
+
+  const el = document.querySelector('[data-fit-title]');
+  const underline = document.querySelector('[data-title-underline]');
+  if (!el) return;
+
+  const L = visualLength((el.textContent || '').trim());
+  let size = Math.max(72, Math.min(150, baseSize(L)));
+  el.style.setProperty('--title-size', size + 'px');
+
+  const maxLines = 1;
+  const lineHeight = 1.08;
+  const min = 64;
+  const fit = () => {
+    let current = parseFloat(getComputedStyle(el).fontSize);
+    while ((el.scrollWidth > el.clientWidth || el.scrollHeight > current * lineHeight * maxLines + 2) && current > min) {
+      current -= 2;
+      el.style.setProperty('--title-size', current + 'px');
+    }
+
+    // underline matches title text width (single-line title case)
+    if (underline) {
+      const card = el.closest('.card');
+      const cardStyle = getComputedStyle(card);
+      const maxW = card.clientWidth - parseFloat(cardStyle.paddingLeft) - parseFloat(cardStyle.paddingRight);
+      const measured = Math.ceil(el.scrollWidth);
+      const width = Math.max(80, Math.min(maxW, measured));
+      underline.style.width = width + 'px';
+    }
+  };
+  requestAnimationFrame(fit);
+})();
+</script>
+</body>
+</html>
